@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Dreamy_Dessert" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Tema utama aplikasi -->
+    <style name="Theme.Dreamy_Dessert" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Warna utama untuk aplikasi -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+
+        <!-- Latar belakang aplikasi -->
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Status bar dan navigasi transparan -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- Warna teks -->
+        <item name="android:textColor">@color/black</item>
+
+        <!-- Pengaturan untuk mendukung edge-to-edge -->
+        <item name="isLightTheme">true</item>
+    </style>
+
+    <!-- Tema untuk Splash Screen -->
+    <style name="Theme.Dreamy_Dessert.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/logo</item>
+    </style>
+
 </resources>

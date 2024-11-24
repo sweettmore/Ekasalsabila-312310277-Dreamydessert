@@ -10,4 +10,8 @@
     <color name="pink">#A33C3C</color>
     <color name="merah_fanta">#8E0928</color>
     <color name="putih_tulang">#F6F5F2</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBlack">#000000</color>
 </resources>
