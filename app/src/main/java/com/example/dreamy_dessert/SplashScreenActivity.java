@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.dreamy_dessert.ui.login.LoginActivity;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     private static final int SPLASH_SCREEN_DURATION = 3000; // Durasi splash screen dalam milidetik (3 detik)
@@ -30,7 +32,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         // Handler untuk berpindah ke MainActivity setelah durasi tertentu
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+            Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
             startActivity(intent);
             finish(); // Tutup SplashScreenActivity agar tidak bisa kembali ke layar ini
         }, 3000);

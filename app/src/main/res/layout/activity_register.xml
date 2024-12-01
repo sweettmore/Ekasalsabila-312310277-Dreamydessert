@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putih_tulang">
+
+    <!-- Title Section -->
+    <TextView
+        android:id="@+id/register_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="Register"
+        android:textSize="25sp"
+        android:fontFamily="@font/tienne"
+        android:textColor="@color/pink" />
+
+    <TextView
+        android:id="@+id/app_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="DREAMY DESSERT"
+        android:textSize="30sp"
+        android:textColor="@color/pink"
+        android:fontFamily="@font/aboreto" />
+
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_name_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Please fill your email to register"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/tienne" />
+
+    <!-- Input Fields Section -->
+    <LinearLayout
+        android:id="@+id/input_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instruction_text"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Email"
+            android:background="@drawable/shape"
+            android:padding="20dp"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:textSize="17sp"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:hint="Password"
+            android:background="@drawable/shape"
+            android:padding="20dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:textSize="17sp"/>
+
+        <!-- Confirm Password -->
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:hint="Confirm Password"
+            android:background="@drawable/shape"
+            android:padding="20dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:textSize="16sp"/>
+
+        <!-- Terms and Conditions -->
+        <CheckBox
+            android:id="@+id/terms_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="I accept the terms of services and privacy policy"
+            android:textSize="11sp"
+            android:textColor="#000000"
+            android:padding="11dp"
+            android:fontFamily="@font/tienne"/>
+
+
+    </LinearLayout>
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/input_section"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape"
+        android:text="Register"
+        android:textColor="@color/pink"
+        android:fontFamily="@font/tienne"/>
+
+    <!-- Footer Section -->
+    <LinearLayout
+        android:id="@+id/footer_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/already_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Have account"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/tienne"/>
+
+        <TextView
+            android:id="@+id/sign_in_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:text="Sign In"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:paddingLeft="40dp"
+            android:clickable="true"
+            android:fontFamily="@font/tienne"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
