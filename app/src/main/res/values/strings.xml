@@ -10,4 +10,6 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="toggle_password_description">Toggle password visibility</string>
+    <string name="title_activity_introducing2">IntroducingActivity2</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF8F1">
@@ -9,7 +10,7 @@
         android:id="@+id/title_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -19,25 +20,25 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/tienne"
             android:text="Sign In"
-            android:textColor="@color/pink"
+            android:textColor="#A83F3F"
             android:textSize="25sp" />
 
         <TextView
             android:id="@+id/app_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="DREAMY DESSERT"
-            android:textColor="@color/pink"
+            android:textColor="#A83F3F"
             android:textSize="30sp"
-            android:fontFamily="@font/aboreto"/>
+            android:fontFamily="@font/aboreto" />
 
         <TextView
             android:id="@+id/instruction_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Enter your mobile/\n email and password to sign in"
+            android:text="Enter your mobile/email\nand password to sign in"
             android:textColor="#000000"
             android:textSize="15sp"
             android:fontFamily="@font/tienne"
@@ -55,62 +56,83 @@
         android:layout_marginEnd="24dp"
         android:orientation="vertical">
 
+        <!-- Username Input -->
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/shape"
-            android:hint="@string/prompt_email"
+            android:hint="Mobile Number / Email"
             android:padding="20dp"
             android:inputType="textEmailAddress"
-            android:textColorHint="@color/pink"
+            android:textColorHint="#A83F3F"
             android:fontFamily="@font/tienne"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
-        <EditText
-            android:id="@+id/password"
+        <!-- Password Input with Eye Icon -->
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/shape"
-            android:hint="@string/prompt_password"
-            android:padding="20dp"
-            android:inputType="textPassword"
-            android:textColorHint="@color/pink"
-            android:fontFamily="@font/tienne"
-            android:textSize="15sp"/>
+            android:layout_marginTop="25dp">
 
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape"
+                android:hint="Password"
+                android:padding="20dp"
+                android:inputType="textPassword"
+                android:textColorHint="#A83F3F"
+                android:fontFamily="@font/tienne"
+                android:textSize="15sp"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/password_toggle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/icon_moon_eye"/>
+        </RelativeLayout>
+
+        <!-- Forgot Password -->
         <TextView
             android:id="@+id/forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:layout_marginTop="9dp"
+            android:gravity="end|center_vertical"
             android:text="Forgot password?"
-            android:textColor="#000000"
-            android:textSize="14sp" />
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:fontFamily="@font/tienne" />
     </LinearLayout>
 
     <!-- Sign In Button -->
     <Button
-        android:id="@+id/login"
+        android:id="@+id/button_sign_in"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/input_section"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/shape"
         android:fontFamily="@font/tienne"
         android:text="Sign in"
-        android:textColor="@color/pink" />
+        android:textColor="@color/pink"
+        android:textSize="16sp" />
 
     <!-- ProgressBar -->
     <ProgressBar
         android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login"
+        android:layout_below="@id/button_sign_in"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:visibility="gone" />
@@ -131,18 +153,20 @@
             android:layout_height="wrap_content"
             android:text="Do not have account?"
             android:textColor="#000000"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/tienne" />
 
         <TextView
-            android:id="@+id/register_text"
+            android:id="@+id/register_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:gravity="center_vertical"
             android:text="Register"
-            android:textColor="#A05850"
+            android:textColor="#A83F3F"
             android:textSize="14sp"
             android:fontFamily="@font/tienne"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:clickable="true" />
     </LinearLayout>
-
 </RelativeLayout>

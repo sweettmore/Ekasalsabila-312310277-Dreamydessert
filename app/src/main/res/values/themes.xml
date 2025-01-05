@@ -27,4 +27,18 @@
         <item name="android:windowBackground">@drawable/logo</item>
     </style>
 
+        <!-- Gaya untuk item aktif -->
+        <style name="TextAppearance.BottomNav.Active" parent="TextAppearance.AppCompat.Medium">
+            <item name="android:textStyle">bold</item>
+            <item name="android:textSize">14sp</item>
+        </style>
+
+        <!-- Gaya untuk item tidak aktif -->
+        <style name="TextAppearance.BottomNav.Inactive" parent="TextAppearance.AppCompat.Medium">
+            <item name="android:textStyle">normal</item>
+            <item name="android:textSize">12sp</item>
+        </style>
+
+
+
 </resources>

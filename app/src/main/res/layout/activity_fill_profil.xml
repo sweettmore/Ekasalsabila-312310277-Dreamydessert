@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putih_tulang"> <!-- Warna putih tulang -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/baseline_keyboard_arrow_left_24"
+            android:layout_marginTop="15dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FILL PROFILE"
+            android:textColor="@color/pink"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/tienne"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please fill the form with your valid data"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Name Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your name"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Name Input -->
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Full Name"
+            android:background="@drawable/shape"
+            android:paddingLeft="20dp"
+            android:textSize="15sp"
+            android:textColorHint="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Email Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email"
+            android:background="@drawable/shape"
+            android:paddingLeft="20dp"
+            android:textSize="15sp"
+            android:textColorHint="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Birthday Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birthday"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Birthday Input -->
+        <EditText
+            android:id="@+id/input_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Birthday"
+            android:background="@drawable/shape"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="15sp"
+            android:focusable="false"
+            android:drawableEnd="@drawable/calender"
+            android:textColorHint="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Gender Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Gender Options -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radio_group_gender"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:fontFamily="@font/tienne"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:fontFamily="@font/tienne"
+                android:layout_marginStart="32dp"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <!-- Mobile Number Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Mobile Number Input -->
+        <EditText
+            android:id="@+id/input_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Input Mobile Number"
+            android:background="@drawable/shape"
+            android:textSize="15sp"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/button_continue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="CONTINUE"
+            android:textAllCaps="false"
+            android:textColor="@color/pink"
+            android:fontFamily="@font/tienne"
+            android:background="@drawable/shape"/>
+    </LinearLayout>
+</ScrollView>
