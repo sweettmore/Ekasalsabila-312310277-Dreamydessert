@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dreamy_Dessert">
         <activity
-            android:name=".SearchActivity"
-            android:exported="false" />
-        <activity
             android:name=".NavigasiActivity"
             android:exported="true" />
         <activity
