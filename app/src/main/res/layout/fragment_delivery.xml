@@ -1,291 +1,287 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <!-- Header Section with Background -->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:background="#D3D3D3"
         android:padding="16dp">
 
-        <!-- Header Section with Background -->
-        <RelativeLayout
+        <!-- Title -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery"
+                android:fontFamily="@font/tienne"
+                android:textSize="16dp"
+                android:textColor="@color/red"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MENU SELECTION"
+                android:textSize="18sp"
+                android:fontFamily="@font/tienne"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Search and Cart Icons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/pencarian"
+                android:contentDescription="Search Icon"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/cart"
+                android:contentDescription="Cart Icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/putih_tulang">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#D3D3D3"
+            android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Title -->
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <!-- Menu Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentStart="true">
+                android:columnCount="2"
+                android:layout_gravity="center">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- Black Forest Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Delivery"
-                    android:textSize="14sp"
-                    android:textColor="#990000"
-                    android:paddingBottom="4dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MENU SELECTION"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#990000"
-                    android:paddingBottom="16dp" />
-            </LinearLayout>
-
-            <!-- Search and Cart Icons -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_alignParentEnd="true">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/pencarian"
-                    android:contentDescription="Search Icon" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/cart"
-                    android:layout_marginStart="16dp"
-                    android:contentDescription="Cart Icon" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <!-- Divider Line -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#CCCCCC"
-            android:layout_marginBottom="8dp" />
-
-        <!-- Menu Grid -->
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:layout_gravity="center">
-
-            <!-- Black Forest Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake2"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:id="@+id/text_black_forest_cake"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Black Forest Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-            <!-- Cheese Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake2"
+                        android:scaleType="centerCrop" />
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake3"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Black Forest Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_cheese_cake"
-                    android:layout_width="wrap_content"
+                <!-- Cheese Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Cheese Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-            <!-- Red Velvet Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake3"
+                        android:scaleType="centerCrop" />
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake4"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cheese Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_red_velvet_cake"
-                    android:layout_width="wrap_content"
+                <!-- Red Velvet Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Red Velvet Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-            <!-- Chocolate Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake4"
+                        android:scaleType="centerCrop" />
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake5"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Red Velvet Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_chocolate_cake"
-                    android:layout_width="wrap_content"
+                <!-- Chocolate Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Chocolate Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-            <!-- Fruit Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake5"
+                        android:scaleType="centerCrop" />
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake6"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chocolate Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_fruit_cake"
-                    android:layout_width="wrap_content"
+                <!-- Fruit Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Fruit Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-            <!-- Ice Cream Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake6"
+                        android:scaleType="centerCrop" />
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake7"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fruit Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_ice_cream_cake"
-                    android:layout_width="wrap_content"
+                <!-- Ice Cream Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Ice Cream Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-            <!-- Mouse Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake7"
+                        android:scaleType="centerCrop" />
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake8"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ice Cream Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_mouse_cake"
-                    android:layout_width="wrap_content"
+                <!-- Mousse Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Mouse Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-            <!-- Crepes Cake -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:padding="8dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake8"
+                        android:scaleType="centerCrop" />
 
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/cake9"
-                    android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mousse Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_crepes_cake"
-                    android:layout_width="wrap_content"
+                <!-- Crepes Cake -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Crepes Cake"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:onClick="onCakeNameClick" />
-            </LinearLayout>
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
 
-        </GridLayout>
-    </LinearLayout>
-</ScrollView>
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/cake9"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crepes Cake"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,231 +1,225 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F8F8">
+    android:orientation="vertical"
+    android:background="#F8F8F8"
+    android:paddingTop="24dp"> <!-- Added padding at the top -->
 
+    <!-- Profile Section (This will not scroll) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:paddingBottom="24dp">
 
-        <!-- Profile Section -->
+        <!-- Profile Picture (Empty) -->
+        <ImageView
+            android:id="@+id/edit_profile_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/circe"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:padding="2dp" />
+
+        <!-- User Details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eka Salsabila"
+                android:textSize="18sp"
+                android:textColor="@color/pink"
+                android:fontFamily="@font/tienne" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ekasalsabila@gmail.com"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="085810302979"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <!-- Edit Icon (Top Right) -->
+        <ImageView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:src="@drawable/pencil"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Edit Profile" />
+    </LinearLayout>
+
+    <!-- Scrollable Content Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingBottom="24dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <!-- Profile Picture -->
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/foto_profil"
-                android:background="@drawable/circe"
-                android:clipToOutline="true"
-                android:scaleType="centerCrop"
-                android:padding="2dp" />
-
-            <!-- User Details -->
+            <!-- Change Password -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/change_password"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp">
+                android:orientation="horizontal"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="start"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eka Salsabila"
-                    android:textSize="18sp"
-                    android:textColor="@color/pink"
-                    android:fontFamily="@font/tienne" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ekasalsabila@gmail.com"
-                    android:textSize="14sp"
-                    android:textColor="#666666" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="085810302979"
-                    android:textSize="14sp"
-                    android:textColor="#666666" />
+                    android:text="Change Password"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
             </LinearLayout>
 
-            <!-- Edit Icon (Top Right) -->
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/pencil"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:contentDescription="Edit Profile"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="onEditProfileClicked" />
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="16dp" />
 
-        </LinearLayout>
-
-        <!-- Change Password -->
-        <LinearLayout
-            android:id="@+id/change_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="start"
-            android:paddingVertical="12dp"
-            android:layout_marginBottom="16dp"
-            android:onClick="onChangePasswordClicked">
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- FAQ -->
+            <LinearLayout
+                android:id="@+id/faq"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Change Password"
-                android:textSize="16sp"
-                android:textColor="#000000" />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="start"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="16dp">
 
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#DDDDDD"
-            android:layout_marginBottom="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FAQ"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+            </LinearLayout>
 
-        <!-- FAQ -->
-        <LinearLayout
-            android:id="@+id/faq"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="start"
-            android:paddingVertical="12dp"
-            android:layout_marginBottom="16dp"
-            android:onClick="onFAQClicked">
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Give Us Feedback -->
+            <LinearLayout
+                android:id="@+id/give_feedback"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FAQ"
-                android:textSize="16sp"
-                android:textColor="#000000" />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="start"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="16dp">
 
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#DDDDDD"
-            android:layout_marginBottom="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Give Us Feedback"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-        <!-- Give Us Feedback -->
-        <LinearLayout
-            android:id="@+id/give_feedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="start"
-            android:paddingVertical="12dp"
-            android:layout_marginBottom="16dp"
-            android:onClick="onGiveFeedbackClicked">
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Contact Us -->
+            <LinearLayout
+                android:id="@+id/contact_us"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Give Us Feedback"
-                android:textSize="16sp"
-                android:textColor="#000000" />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="start"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="16dp">
 
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#DDDDDD"
-            android:layout_marginBottom="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+            </LinearLayout>
 
-        <!-- Contact Us -->
-        <LinearLayout
-            android:id="@+id/contact_us"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="start"
-            android:paddingVertical="12dp"
-            android:layout_marginBottom="16dp"
-            android:onClick="onContactUsClicked">
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Privacy Policy -->
+            <LinearLayout
+                android:id="@+id/privacy_policy"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contact Us"
-                android:textSize="16sp"
-                android:textColor="#000000" />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="start"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="24dp">
 
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#DDDDDD"
-            android:layout_marginBottom="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+            </LinearLayout>
 
-        <!-- Privacy Policy -->
-        <LinearLayout
-            android:id="@+id/privacy_policy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="start"
-            android:paddingVertical="12dp"
-            android:layout_marginBottom="24dp"
-            android:onClick="onPrivacyPolicyClicked">
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Log Out Section (Button) -->
+            <Button
+                android:id="@+id/log_out"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Privacy Policy"
+                android:text="Log Out"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="@color/pink"
+                android:fontFamily="@font/tienne"
+                android:paddingVertical="12dp"
+                android:gravity="center"
+                android:background="@drawable/shape"
+                android:layout_marginTop="24dp" />
         </LinearLayout>
-
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#DDDDDD"
-            android:layout_marginBottom="24dp" />
-
-        <!-- Log Out Section (Button) -->
-        <Button
-            android:id="@+id/log_out"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log Out"
-            android:textSize="16sp"
-            android:textColor="@color/pink"
-            android:fontFamily="@font/tienne"
-            android:paddingVertical="12dp"
-            android:gravity="center"
-            android:background="@drawable/shape"
-            android:layout_marginTop="24dp" />
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

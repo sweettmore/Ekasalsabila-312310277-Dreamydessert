@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DeliveryFragment#newInstance} factory method to
+ * Use the {@link OrderFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class DeliveryFragment extends Fragment {
@@ -34,7 +34,7 @@ public class DeliveryFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DeliveryFragment.
+     * @return A new instance of fragment OrderFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static DeliveryFragment newInstance(String param1, String param2) {
